@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.2.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  
+  <title>CodeforcesRound#727(Div.2)题解xiaodangao - Hexo</title>
+
+  
+    <meta name="description" content="题目链接[CodeforcesRound#727(Div.2)](https&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1539)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CodeforcesRound#727(Div.2)题解xiaodangao">
+<meta property="og:url" content="http://example.com/2021/07/02/Codeforces%20Round%20#727%20(Div.%202)%E9%A2%98%E8%A7%A3-xiaodangao/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="题目链接[CodeforcesRound#727(Div.2)](https&#x2F;&#x2F;codeforces.com&#x2F;contest&#x2F;1539)">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-02T09:08:00.000Z">
+<meta property="article:modified_time" content="2024-04-22T03:41:12.036Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="计算机科学">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="计算机科学">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Hexo</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/04/22/%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A/"><span class="title">技术报告-xiaodangao</span></a><a class="item title" href="/2023/11/13/%E5%85%B3%E4%BA%8EDataframe%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98-xiaodangao/"><span class="title">关于Dataframe数据保存出现的问题xiaodangao</span></a><a class="item title" href="/2023/03/14/%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81%E9%9B%86%E7%9B%B8%E5%85%B3-xiaodangao/"><span class="title">交叉验证集相关xiaodangao</span></a><a class="item title" href="/2023/03/09/%5Bmachine-learning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5D%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92-xiaodangao/"><span class="title">[machinelearning学习笔记]逻辑回归xiaodangao</span></a><a class="item title" href="/2023/03/08/%5Bleetcode%5D2584.%20%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84%E4%BD%BF%E4%B9%98%E7%A7%AF%E4%BA%92%E8%B4%A8%20%EF%BC%88%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3%EF%BC%89-xiaodangao/"><span class="title">[leetcode]2584.分割数组使乘积互质（质因数分解）xiaodangao</span></a><a class="item title" href="/2023/03/07/%5Bleetcode%5D2552.%20%E7%BB%9F%E8%AE%A1%E4%B8%8A%E5%8D%87%E5%9B%9B%E5%85%83%E7%BB%84.%E9%A2%98%E8%A7%A3O(n%5E2)-xiaodangao/"><span class="title">[leetcode]2552.统计上升四元组.题解O(n^2)xiaodangao</span></a><a class="item title" href="/2023/03/02/leetcode%202564.%20%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BC%82%E6%88%96%E6%9F%A5%E8%AF%A2%5B%E9%A2%98%E8%A7%A3%5D-xiaodangao/"><span class="title">leetcode2564.子字符串异或查询[题解]xiaodangao</span></a><a class="item title" href="/2023/03/02/leetcode2565.%20%E6%9C%80%E5%B0%91%E5%BE%97%E5%88%86%E5%AD%90%E5%BA%8F%E5%88%97%5B%E9%A2%98%E8%A7%A3%5D-xiaodangao/"><span class="title">leetcode2565.最少得分子序列[题解]xiaodangao</span></a><a class="item title" href="/2022/04/22/P3224%20%5BHNOI2012%5D%E6%B0%B8%E6%97%A0%E4%B9%A1%EF%BC%88fhq-treap%E9%A2%98%E8%A7%A3%EF%BC%89-xiaodangao/"><span class="title">P3224[HNOI2012]永无乡（fhqtreap题解）xiaodangao</span></a><a class="item title" href="/2021/11/03/CF1593F%20Red-Black%20Number%EF%BC%88%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89-xiaodangao/"><span class="title">CF1593FRedBlackNumber（记忆化搜索，动态规划）xiaodangao</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/">计算机科学</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2021-07-02T09:08:00.000Z">2021-07-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-04-22T03:41:12.036Z">2024-04-22</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>CodeforcesRound#727(Div.2)题解xiaodangao</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>题目链接：<a target="_blank" rel="noopener" href="https://codeforces.com/contest/1539">Codeforces Round #727 (Div. 2)</a></p>
+<blockquote>
+<p>Problem.A Contest Start</p>
+</blockquote>
+<p>思路：数学问题，看懂题目思路应该就出来了。单组复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Θ</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Theta (1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Θ</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">Code:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></p>
+<pre><code class="hljs plaintext">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;queue&gt;
+#include &lt;set&gt;
+#include &lt;stack&gt;
+#include &lt;vector&gt;
+#define ll long long
+#define ull unsigned long long
+#define pb push_back
+#define mp make_pair
+#define rep(i, a, b) for (int i = a; i &lt;= b; ++i)
+#define bep(i, a, b) for (int i = a; i &gt;= b; --i)
+#define lowbit(x) (x &amp; (-x))
+#define ch() getchar()
+#define pc(x) putchar(x)
+using namespace std;
+
+template &lt;typename T&gt;
+void read(T&amp; x) &#123;
+    static char c;
+    static int f;
+    for (c = ch(), f = 1; c &lt; &#x27;0&#x27; || c &gt; &#x27;9&#x27;; c = ch())
+        if (c == &#x27;-&#x27;) f = -f;
+    for (x = 0; c &gt;= &#x27;0&#x27; &amp;&amp; c &lt;= &#x27;9&#x27;; c = ch()) x = x * 10 + (c &amp; 15);
+    x *= f;
+&#125;
+template &lt;typename T&gt;
+void write(T x) &#123;
+    static char q[65];
+    int cnt = 0;
+    if (x &lt; 0) pc(&#x27;-&#x27;), x = -x;
+    q[++cnt] = x % 10, x /= 10;
+    while (x) q[++cnt] = x % 10, x /= 10;
+    while (cnt) pc(q[cnt--] + &#x27;0&#x27;);
+&#125;
+const int N = 1e5 + 10;
+int _;
+ll n,x,t;
+void solve() &#123;
+    read(_);
+    while (_--) &#123;
+        read(n);read(x);read(t);
+        ll hh = min(t/x,n-1);
+       // printf(&quot;%lld\n&quot;,hh);
+        ll k = ceil(((n-1)*x - t)/(x*1.0));
+       // printf(&quot;%lld\n&quot;,k);
+        k = max(k,0ll);
+        ll ans = k * hh + (hh + 1)*hh/2;
+         write(ans);pc(&#x27;\n&#x27;);
+    &#125;
+&#125;
+signed main() &#123;
+    solve();
+    return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>Problem.B Love Song</p>
+</blockquote>
+<p>思路：前缀和预处理一下。<br />
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">Code:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></p>
+<pre><code class="hljs plaintext">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;queue&gt;
+#include &lt;set&gt;
+#include &lt;stack&gt;
+#include &lt;vector&gt;
+#define ll long long
+#define ull unsigned long long
+#define pb push_back
+#define mp make_pair
+#define rep(i, a, b) for (int i = a; i &lt;= b; ++i)
+#define bep(i, a, b) for (int i = a; i &gt;= b; --i)
+#define lowbit(x) (x &amp; (-x))
+#define ch() getchar()
+#define pc(x) putchar(x)
+using namespace std;
+
+template &lt;typename T&gt;
+void read(T&amp; x) &#123;
+    static char c;
+    static int f;
+    for (c = ch(), f = 1; c &lt; &#x27;0&#x27; || c &gt; &#x27;9&#x27;; c = ch())
+        if (c == &#x27;-&#x27;) f = -f;
+    for (x = 0; c &gt;= &#x27;0&#x27; &amp;&amp; c &lt;= &#x27;9&#x27;; c = ch()) x = x * 10 + (c &amp; 15);
+    x *= f;
+&#125;
+template &lt;typename T&gt;
+void write(T x) &#123;
+    static char q[65];
+    int cnt = 0;
+    if (x &lt; 0) pc(&#x27;-&#x27;), x = -x;
+    q[++cnt] = x % 10, x /= 10;
+    while (x) q[++cnt] = x % 10, x /= 10;
+    while (cnt) pc(q[cnt--] + &#x27;0&#x27;);
+&#125;
+const int N = 3e5 + 10;
+int sum[N][202];
+void solve() &#123;
+    int ns, q;
+    ios::sync_with_stdio(false);
+    cin &gt;&gt; ns &gt;&gt; q;
+    string s;cin &gt;&gt; s;
+    s = &#x27;0&#x27; + s;
+    rep(i,1,ns) &#123;
+        for (char c = &#x27;a&#x27;; c &lt;= &#x27;z&#x27; ; c ++) &#123;
+            sum[i][c] = sum[i-1][c];
+            if (s[i] == c)sum[i][c]++;
+        &#125;
+    &#125;
+    while (q--) &#123;
+        int l, r;
+        cin &gt;&gt; l &gt;&gt; r;
+        ll t = 0;
+
+        for (int i = &#x27;a&#x27;; i &lt;= &#x27;z&#x27;; i ++) &#123;
+            t += (sum[r][i] - sum[l-1][i]) * (i-&#x27;a&#x27;+ 1);
+        &#125;
+
+        cout &lt;&lt; t &lt;&lt; endl;
+    &#125;
+&#125;
+signed main()&#123;solve();return 0; &#125;
+
+</code></pre>
+<blockquote>
+<p>Problem.C Stable Groups</p>
+</blockquote>
+<p>思路：贪心，模拟，具体实现看代码。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">Code:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></p>
+<pre><code class="hljs plaintext">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;queue&gt;
+#include &lt;set&gt;
+#include &lt;stack&gt;
+#include &lt;vector&gt;
+#define ll long long
+#define ull unsigned long long
+#define pb push_back
+#define mp make_pair
+#define rep(i, a, b) for (int i = a; i &lt;= b; ++i)
+#define bep(i, a, b) for (int i = a; i &gt;= b; --i)
+#define lowbit(x) (x &amp; (-x))
+#define ch() getchar()
+#define pc(x) putchar(x)
+using namespace std;
+
+template &lt;typename T&gt;
+void read(T&amp; x) &#123;
+    static char c;
+    static int f;
+    for (c = ch(), f = 1; c &lt; &#x27;0&#x27; || c &gt; &#x27;9&#x27;; c = ch())
+        if (c == &#x27;-&#x27;) f = -f;
+    for (x = 0; c &gt;= &#x27;0&#x27; &amp;&amp; c &lt;= &#x27;9&#x27;; c = ch()) x = x * 10 + (c &amp; 15);
+    x *= f;
+&#125;
+template &lt;typename T&gt;
+void write(T x) &#123;
+    static char q[65];
+    int cnt = 0;
+    if (x &lt; 0) pc(&#x27;-&#x27;), x = -x;
+    q[++cnt] = x % 10, x /= 10;
+    while (x) q[++cnt] = x % 10, x /= 10;
+    while (cnt) pc(q[cnt--] + &#x27;0&#x27;);
+&#125;
+const int N = 200000 + 99;
+ll a[N];
+struct sk &#123;
+    ll fi, se;
+    bool operator&lt;(sk rhs) const&#123;
+        return rhs.fi &lt; fi;
+    &#125;
+&#125;;
+priority_queue&lt;sk&gt;qq;
+bool ff[N];
+void solve() &#123;
+    ll n, k , x;
+    read(n);read(k);read(x);
+    ll m = k;
+    for (ll i = 1; i &lt;= n; i ++) &#123;
+        read(a[i]);
+    &#125;
+    sort(a + 1, a + 1 + n);
+    ll ans = 1;
+    for (ll i = 1; i &lt; n; i ++) &#123;
+        if (a[i] + x &gt;= a[i + 1])continue;
+        ans++;
+        ll se = i;
+        ll tr;
+        ll len = a[i + 1] - a[i];
+        len -= x;
+        len = len / x + (len%x != 0);
+        qq.push(&#123;len, se&#125;);
+    &#125;
+    while (!qq.empty()) &#123;
+        auto now = qq.top();
+        qq.pop();
+        if (m &gt;= now.fi) &#123;
+            ans--;
+            m -= now.fi;
+        &#125;
+    &#125;
+       write(ans);pc(&#x27;\n&#x27;);
+&#125;
+signed main() &#123;
+    solve();
+    return 0;
+&#125;
+</code></pre>
+<blockquote>
+<p>Problem.D PriceFixed</p>
+</blockquote>
+<p>思路：对于每一种商品，都给了他半价时的要求，所以我们将这个要求进行排序，然后贪心，优先实现要求苛刻的，因为每一种商品都有购买数量，所以我们不可能购买多于该购买数量的。其次，我们排完序后，定义一个指针，这个指针一开始指向购买的最后一件商品，这是上限，下限是当前的半价条件和购买的件数，（我们此次计算只计算最多半价件数，最后用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∑</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\sum a[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span>减去最多半价件数就是最小原价购买的数量），如果购买的件数还没达到下限（半价条件），换句话说，当前商品全部能够半价，那么上限移至当前上限-购买件数，否则我们根据下限：半价条件来计算最大半价购买数量，同时上限指针移动。</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">Code:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></p>
+<pre><code class="hljs plaintext">#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+#include &lt;map&gt;
+#include &lt;queue&gt;
+#include &lt;set&gt;
+#include &lt;stack&gt;
+#include &lt;vector&gt;
+#define ll long long
+#define ull unsigned long long
+#define pb push_back
+#define mp make_pair
+#define rep(i, a, b) for (int i = a; i &lt;= b; ++i)
+#define bep(i, a, b) for (int i = a; i &gt;= b; --i)
+#define lowbit(x) (x &amp; (-x))
+#define ch() getchar()
+#define pc(x) putchar(x)
+using namespace std;
+
+template &lt;typename T&gt;
+void read(T&amp; x) &#123;
+    static char c;
+    static int f;
+    for (c = ch(), f = 1; c &lt; &#x27;0&#x27; || c &gt; &#x27;9&#x27;; c = ch())
+        if (c == &#x27;-&#x27;) f = -f;
+    for (x = 0; c &gt;= &#x27;0&#x27; &amp;&amp; c &lt;= &#x27;9&#x27;; c = ch()) x = x * 10 + (c &amp; 15);
+    x *= f;
+&#125;
+template &lt;typename T&gt;
+void write(T x) &#123;
+    static char q[65];
+    int cnt = 0;
+    if (x &lt; 0) pc(&#x27;-&#x27;), x = -x;
+    q[++cnt] = x % 10, x /= 10;
+    while (x) q[++cnt] = x % 10, x /= 10;
+    while (cnt) pc(q[cnt--] + &#x27;0&#x27;);
+&#125;
+const int N = 2e5 + 10;
+int _;
+int n,x,t;
+pair&lt;ll,ll&gt;a[N];
+void solve() &#123;
+//    read(_);
+        read(n);
+        ll sum = 0;
+        rep(i,1,n)&#123;
+            ll u,v;
+            read(u);read(v);
+            a[i] = &#123;v+1,u&#125;;
+            sum += u;
+        &#125;
+        sort(a+1,a+1+n);reverse(a+1,a+1+n);
+        ll now = sum,ans = 0ll;
+        rep(i,1,n)&#123;
+        //puts(&quot;x&quot;);
+            if(a[i].first &gt; sum)continue;
+            ll dis = now - a[i].first + 1;//最多个数
+            ll suf = a[i].second;
+            if(suf &gt;= dis)&#123;
+                now = a[i].first - 1;
+                ans += dis;
+            &#125; else &#123;
+                now -= suf;
+                ans += suf;
+            &#125;
+        &#125;
+        ll k =( sum - ans )*2;
+        ans += k;
+        write(ans);pc(&#x27;\n&#x27;);
+  //  &#125;
+&#125;
+signed main() &#123;
+    solve();
+    return 0;
+&#125;
+
+</code></pre>
+<blockquote>
+<p>Problem.E Game with Cards</p>
+</blockquote>
+<p>输入：第一行<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n,m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span></span></span></span>;<br />
+接下来<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>组每一组输入一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">a[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span></span></span></span>，然后两个范围<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo><mo separator="true">,</mo><mo stretchy="false">(</mo><mi>p</mi><mi>a</mi><mi>i</mi><mi>r</mi><mo separator="true">,</mo><mi>j</mi><mo>∈</mo><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x[i][j],(pair,j∈[0,1])</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mclose">)</span></span></span></span><br />
+思路：考虑DP，朴素做法是维护 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mn>0</mn><mi mathvariant="normal">/</mi><mn>1</mn><mo separator="true">,</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(0/1,i,j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">0</span><span class="mord">/</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span> 其中第一维代表的是当前更新左右手，第二维代表当前进行到第 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span> 个，第三维代表另一只手所在位置，其实这就是一个典型的线性DP，我们通过三维能够确定两只手的全部位置信息 ,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>k</mi><mo separator="true">,</mo><mi>i</mi><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(k,i,j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span> 为真当且仅当<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>k</mi><mo separator="true">,</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(k,i-1,j)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">)</span></span></span></span>为真且<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>l</mi><mo>≤</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>≤</mo><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">x[i][k].l \leq a[i] \leq x[i][k].r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>且<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo>⨁</mo><mn>1</mn><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>l</mi><mo>≤</mo><mi>a</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo><mo>≤</mo><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo>⨁</mo><mn>1</mn><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">x[i][k \bigoplus 1].l \leq a[j] \leq x[i][k \bigoplus 1].r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>。时间复杂度和空间复杂度均为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Θ</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Theta (n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord">Θ</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span>。发现该<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span>数组存储的是是否可达，因此可以利用一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">set</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span>进行维护，这个操作就有点类似于离散化的操作，存储目前所有可达下标，再优化一些，我们发现我们每一次都更新该<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">set</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span>因此我们可以反复利用一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">set</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span>来减少一维(i)，然后每一次更新时，我们只需要在满足<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>l</mi><mo>≤</mo><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>≤</mo><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">x[i][k].l \leq a[i] \leq x[i][k].r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>时，遍历 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">set</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span> 集合，因为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi><mi>e</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">set</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span></span></span></span> 集合有序，所以满足单调性，在第一个符合条件 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo>⨁</mo><mn>1</mn><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>l</mi><mo>≤</mo><mi>a</mi><mo stretchy="false">[</mo><mi>j</mi><mo stretchy="false">]</mo><mo>≤</mo><mi>x</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo stretchy="false">[</mo><mi>k</mi><mo>⨁</mo><mn>1</mn><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">x[i][k \bigoplus 1].l \leq a[j] \leq x[i][k \bigoplus 1].r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.00001em;vertical-align:-0.25001em;"></span><span class="mord mathdefault">x</span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mclose">]</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">⨁</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span> 之后就可以退出。时间复杂度 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Θ</mi><mo stretchy="false">(</mo><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Theta (nlogn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Θ</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>，然后每次记录一下路径就可以了。<br />
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">Code:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></p>
+<pre><code class="hljs plaintext">/* -*- encoding: utf-8 -*-
+&#x27;&#x27;&#x27;
+@File    :   E.cpp
+@Time    :   2021/07/01 14:49:05
+@Author  :   puddle_jumper
+@Version :   1.0
+@Contact :   1194446133@qq.com
+&#x27;&#x27;&#x27;
+
+# here put the import lib*/
+#include&lt;set&gt;
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstdlib&gt;
+#include&lt;map&gt;
+#include&lt;algorithm&gt;
+#include&lt;vector&gt;
+#include&lt;queue&gt;
+#define ch() getchar()
+#define pc(x) putchar(x)
+#include&lt;stack&gt;
+#include&lt;unordered_map&gt;
+#define rep(i,a,b) for(auto i=a;i&lt;=b;++i)
+#define bep(i,a,b) for(auto i=a;i&gt;=b;--i)
+#define lowbit(x) x&amp;(-x)
+#define ll long long
+#define ull unsigned long long
+#define pb push_back
+#define mp make_pair
+#define PI acos(-1)
+using namespace std;
+template&lt;typename T&gt;void read(T&amp;x)&#123;
+    static char c;
+    static int f;
+    for(c=ch(),f=1; c&lt;&#x27;0&#x27;||c&gt;&#x27;9&#x27;; c=ch())if(c==&#x27;-&#x27;)f=-f;
+    for(x=0; c&gt;=&#x27;0&#x27;&amp;&amp;c&lt;=&#x27;9&#x27;; c=ch())x=x*10+(c&amp;15);
+    x*=f;
+&#125;
+template&lt;typename T&gt;void write(T x)&#123;
+    static char q[65];
+    int cnt=0;
+    if(x&lt;0)pc(&#x27;-&#x27;),x=-x;
+    q[++cnt]=x%10,x/=10;
+    while(x)
+        q[++cnt]=x%10,x/=10;
+    while(cnt)pc(q[cnt--]+&#x27;0&#x27;);
+&#125;
+
+const int N = 1e5+10;
+
+int a[N];
+pair&lt;int,int&gt;x[N][2];
+int n,m;
+set&lt;pair&lt;int,int&gt; &gt;f[2];
+int to[N][2];
+void print(int idx,int x)&#123;
+    if(!idx)return ;
+    print(to[idx][x],x^1);
+    rep(i,to[idx][x]+1,idx)write(x),pc(&#x27; &#x27;);
+&#125;
+void solve()&#123;
+    read(n);read(m);
+    rep(i,1,n)&#123;
+        read(a[i]);
+        rep(j,0,1)read(x[i][j].first),read(x[i][j].second);
+    &#125;
+    if(x[1][0].first &lt;= a[1] and a[1]&lt;=x[1][0].second and !x[1][1].first)f[0].insert(&#123;0,0&#125;);
+    if(x[1][1].first &lt;= a[1] and a[1]&lt;=x[1][1].second and !x[1][0].first)f[1].insert(&#123;0,0&#125;);
+    rep(i,2,n)&#123;
+        bool x1 = f[1].empty(),x0 = f[0].empty();
+        if(!x1)&#123;f[0].insert(&#123;a[i-1],i-1&#125;); &#125;
+        if(!x0)&#123;f[1].insert(&#123;a[i-1],i-1&#125;); &#125;
+        rep(j,0,1)&#123;
+            if(x[i][j].first&lt;=a[i] and a[i]&lt;=x[i][j].second)&#123;
+                while(f[j].size() and (*f[j].begin()).first&lt;x[i][j^1].first)&#123;f[j].erase(f[j].begin()); &#125;
+                while(f[j].size() and (*f[j].rbegin()).first&gt;x[i][j^1].second)&#123;f[j].erase(*f[j].rbegin()); &#125;
+
+            &#125;else f[j].clear();
+            if(!f[j].empty())to[i][j] = (*f[j].begin()).second;
+        &#125;
+    &#125;
+    if(!f[0].empty())puts(&quot;Yes&quot;),print(n,0);
+    else if(!f[1].empty())puts(&quot;Yes&quot;),print(n,1);
+    else puts(&quot;No&quot;);
+&#125;
+
+
+signed main()&#123;solve();return 0; &#125;
+
+</code></pre>
+<blockquote>
+<p>Problem.F Strange Array</p>
+</blockquote>
+<p>这个题意有点难理解；<br />
+思路：该题需要求中位数，因此我们想到对于每一次询问，首先考虑该值比中值要小，我们将小于等于该数的设为-1，相应的将大于该数的设为1，于是这样就将题意转化为求<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>≤</mo><mi>l</mi><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>r</mi><mo>≤</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">1 \leq l \leq i \leq r \leq n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83041em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.79549em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span>的范围里，最大的和，因为该题要求的距离=（大于a[i]的个数-小于等于a[i]的个数）/2 ,所以可以这样转化，通过转化我们发现问题好像简化了一点点，但是如果每一次都进行赋值1，-1的话，复杂度过不去，问题就是每一次进行赋值的操作，对于求区间最大值，我们可以通过维护一个线段树来进行求解，具体做法是：首先进行维护数组前缀和，然后对于前缀和建立线段树，维护最大值，最小值，然后将区间最大值转化为询问 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mi>i</mi><mo separator="true">,</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[i,n]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mclose">]</span></span></span></span> 中的最大值-询问 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mtext> </mtext><mi>i</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1~i-1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.74285em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace nobreak"> </span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> 中的最小值。解决了区间最大值问题之后，我们考虑优化赋值问题，我们可以通过对于数组进行排序操作来解决，遍历排序之后的数组，因为排序之后每一次移动，只需要更改当前指向的值为-1，其它值并不用动，因为我们维护的是前缀和，所以该操作对应的应为线段树区间修改，利用懒惰节点可以<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Θ</mi><mo stretchy="false">(</mo><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Theta (logn)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">Θ</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>的实现修改操作。到这里，问题就解决了，该值比中值大的情况反过来就可以。然后需要再注意一些细节。<br />
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">Code:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span></p>
+<pre><code class="hljs plaintext">
+/* -*- encoding: utf-8 -*-
+&#x27;&#x27;&#x27;
+@File    :   F.cpp
+@Time    :   2021/07/02 08:32:34
+@Author  :   puddle_jumper 
+@Version :   1.0
+@Contact :   1194446133@qq.com
+&#x27;&#x27;&#x27;
+
+# here put the import lib*/
+#include&lt;set&gt;
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+#include&lt;cmath&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstdlib&gt;
+#include&lt;map&gt;
+#include&lt;algorithm&gt;
+#include&lt;vector&gt;
+#include&lt;queue&gt;
+#define ch() getchar()
+#define pc(x) putchar(x)
+#include&lt;stack&gt;
+#include&lt;unordered_map&gt;
+#define rep(i,a,b) for(auto i=a;i&lt;=b;++i)
+#define bep(i,a,b) for(auto i=a;i&gt;=b;--i)
+#define lowbit(x) x&amp;(-x)
+#define ll long long
+#define ull unsigned long long
+#define pb push_back
+#define mp make_pair
+#define PI acos(-1)
+using namespace std;
+template&lt;typename T&gt;void read(T&amp;x)&#123;
+    static char c;
+    static int f;
+    for(c=ch(),f=1; c&lt;&#x27;0&#x27;||c&gt;&#x27;9&#x27;; c=ch())if(c==&#x27;-&#x27;)f=-f;
+    for(x=0; c&gt;=&#x27;0&#x27;&amp;&amp;c&lt;=&#x27;9&#x27;; c=ch())x=x*10+(c&amp;15);
+    x*=f;
+&#125;
+template&lt;typename T&gt;void write(T x)&#123;
+    static char q[65];
+    int cnt=0;
+    if(x&lt;0)pc(&#x27;-&#x27;),x=-x;
+    q[++cnt]=x%10,x/=10;
+    while(x)
+        q[++cnt]=x%10,x/=10;
+    while(cnt)pc(q[cnt--]+&#x27;0&#x27;);
+&#125;
+
+
+const int N = 2e5+10;
+int mi;
+
+struct T&#123;
+    int l,r,Max,Min,tag;
+&#125;tr[N&lt;&lt;2];
+
+//注意我们是在原未排序数组中建树维护前缀和
+
+void buildL(int l,int r,int p)&#123;
+    int mid = l + r &gt;&gt; 1;
+    if(l == r)&#123;
+        tr[p] = &#123;l,r,l,l,0&#125;;return ;
+    &#125;
+    buildL(l,mid,p&lt;&lt;1);buildL(mid+1,r,p&lt;&lt;1|1);
+    tr[p] = &#123;l,r,max(tr[p&lt;&lt;1].Max , tr[p&lt;&lt;1|1].Max),min(tr[p&lt;&lt;1].Min , tr[p&lt;&lt;1|1].Min),0&#125;;
+&#125;
+
+
+
+
+
+void down(int p)&#123;
+    if(!tr[p].tag)return ;
+    tr[p&lt;&lt;1].Max += tr[p].tag,tr[p&lt;&lt;1|1].Max += tr[p].tag;
+    tr[p&lt;&lt;1].Min += tr[p].tag,tr[p&lt;&lt;1|1].Min += tr[p].tag;
+    tr[p&lt;&lt;1].tag += tr[p].tag,tr[p&lt;&lt;1|1].tag += tr[p].tag;
+    tr[p].tag = 0;return;
+&#125;
+
+
+
+int queryMax(int s,int t,int p)&#123;
+    if(tr[p].l &gt; t or tr[p].r &lt; s)return -1e8;
+    if(s &lt;= tr[p].l and tr[p].r&lt;= t)&#123;return tr[p].Max; &#125;
+    down(p);
+    return  max(queryMax(s,t,p&lt;&lt;1),queryMax(s,t,p&lt;&lt;1|1));
+&#125;
+int queryMin(int s,int t,int p)&#123;
+    if(tr[p].l &gt; t or tr[p].r &lt; s)return 1e8;
+    if(s &lt;= tr[p].l and tr[p].r&lt;= t)&#123;return tr[p].Min; &#125;
+    down(p);
+    return  min(queryMin(s,t,p&lt;&lt;1),queryMin(s,t,p&lt;&lt;1|1));
+&#125;
+void modify(int s,int t,int p,int k)&#123;
+    if(tr[p].l &gt; t or tr[p].r &lt; s)return ;
+    if(s &lt;= tr[p].l and tr[p].r &lt;= t)&#123;tr[p].Max+=k;tr[p].Min+=k;tr[p].tag += k;return ; &#125;
+    down(p);
+    modify(s,t,p&lt;&lt;1,k);modify(s,t,p&lt;&lt;1|1,k);
+    tr[p].Max = max(tr[p&lt;&lt;1].Max,tr[p&lt;&lt;1|1].Max);
+    tr[p].Min = min(tr[p&lt;&lt;1].Min,tr[p&lt;&lt;1|1].Min);
+&#125;
+
+struct nodex&#123;
+    int a,id;
+    bool operator&lt;(const nodex &amp;x)&#123;
+        return x.a&gt;a;
+    &#125;
+&#125;a[N];
+
+int n;
+int ans[N];
+void work(int idx,int idy)&#123;
+    if(idx&gt;idy)swap(idx,idy);
+    rep(i,idx,idy)&#123;
+        modify(a[i].id,n,1,-2);
+    &#125;
+&#125;
+void print()&#123;rep(i,1,n)printf(&quot;%d &quot;,ans[i]); &#125;
+int nxt[N];
+void init()&#123;
+    bep(i,n,1)&#123;
+        int idx = i;
+        while(a[i].a == a[i-1].a)i--;
+        nxt[idx] = i;
+    &#125;
+&#125;
+void solve()&#123;
+    read(n);
+    mi = n+1;
+    rep(i,1,n)read(a[i].a),a[i].id = i,mi = min(a[i].a,mi);
+    buildL(1,n,1);
+    sort(a+1,a+1+n);
+    init();
+    rep(i,1,n)&#123;
+        int idx = i;
+        while(i+1 &lt;= n and a[i].a == a[i+1].a)&#123;
+            auto a1 = queryMin(1,a[i].id-1,1);
+            auto a2 = queryMax(a[i].id,n,1);
+            a1 = min(0,a1);
+            if(a[i].id == 1)a1 = 0;
+            ans[a[i].id] = (a2 - a1)/2;i++;
+        &#125;
+        auto a1 = queryMin(1,a[i].id-1,1),a2 = queryMax(a[i].id,n,1);
+        a1 = min(0,a1);
+        if(a[i].id == 1)a1 = 0;
+        ans[a[i].id] = (a2-a1)/2;
+        work(idx,i);
+    &#125;
+    // rep(i,1,n)&#123;
+    // 	printf(&quot;%d &quot;,ans[i]);
+    // &#125;
+    //memset(tr,0,sizeof tr);
+    buildL(1,n,1);
+    bep(i,n,1)&#123;
+        int idx = i;
+        int idy = nxt[idx];
+        idy = max(1,idy);
+        
+        bep(j,idx,idy)&#123;
+            auto a1 = queryMax(a[j].id,n,1);
+            auto a2 = queryMin(1,a[j].id-1,1);
+            a2 = min(0,a2);
+            if(a[j].id == 1)ans[1] = max(ans[1],(a1+1)/2-1);
+            else 
+            ans[a[j].id] = max(ans[a[j].id],(a1-a2+1)/2-1);
+        &#125;
+        work(idx,idy);
+        i = idy;
+    &#125;
+    print();
+&#125;
+
+
+signed main()&#123;solve();return 0; &#125;
+</code></pre>
+<blockquote>
+<p>写在最后</p>
+</blockquote>
+<p>F题我一开始想的区间最大值操作并不是维护前缀和，这样明显是不对的，因为有负值的存在，即该区间可能并不是真正最大值，可能他的子区间的子区间存在一个小于0的极小值，一个大于0的极大值。因此，这种操作不能正确的求出区间最大值。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://example.com/2021/07/02/Codeforces%20Round%20#727%20(Div.%202)%E9%A2%98%E8%A7%A3-xiaodangao/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://example.com/2021/07/02/Codeforces%20Round%20#727%20(Div.%202)%E9%A2%98%E8%A7%A3-xiaodangao/&title=CodeforcesRound#727(Div.2)题解xiaodangao - Hexo&summary=题目链接[CodeforcesRound#727(Div.2)](https//codeforces.com/contest/1539)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=CodeforcesRound#727(Div.2)题解xiaodangao - Hexo&amp;body=http://example.com/2021/07/02/Codeforces%20Round%20#727%20(Div.%202)%E9%A2%98%E8%A7%A3-xiaodangao/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=http://example.com/2021/07/02/Codeforces%20Round%20#727%20(Div.%202)%E9%A2%98%E8%A7%A3-xiaodangao/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2021/07/03/Codeforces%20Round%20#726%20(Div.%202)F.%20Figure%20Fixing%E9%A2%98%E8%A7%A3-xiaodangao/">CodeforcesRound#726(Div.2)F.FigureFixing题解xiaodangao</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2021/06/28/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%8F%92%E5%80%BC%E6%A8%A1%E6%9D%BF%EF%BC%88P4781%EF%BC%89-xiaodangao/">拉格朗日插值模板（P4781）xiaodangao</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">xiaodangao</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br />
+本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+</aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+<script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+<script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

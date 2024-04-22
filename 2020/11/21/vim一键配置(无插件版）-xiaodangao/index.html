@@ -1,0 +1,1134 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0" theme-name="Stellar" theme-version="1.27.0">
+  
+  <meta name="generator" content="Hexo 7.2.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  
+  <title>vim一键配置(无插件版）xiaodangao - Hexo</title>
+
+  
+    <meta name="description" content="&#96;&#96;&#96;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim一键配置(无插件版）xiaodangao">
+<meta property="og:url" content="http://example.com/2020/11/21/vim%E4%B8%80%E9%94%AE%E9%85%8D%E7%BD%AE(%E6%97%A0%E6%8F%92%E4%BB%B6%E7%89%88%EF%BC%89-xiaodangao/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="&#96;&#96;&#96;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-21T04:55:00.000Z">
+<meta property="article:modified_time" content="2024-04-22T03:40:55.243Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="计算机科学">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="计算机科学">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.27.0">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css">
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Hexo</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/04/22/%E6%8A%80%E6%9C%AF%E6%8A%A5%E5%91%8A/"><span class="title">技术报告-xiaodangao</span></a><a class="item title" href="/2023/11/13/%E5%85%B3%E4%BA%8EDataframe%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98-xiaodangao/"><span class="title">关于Dataframe数据保存出现的问题xiaodangao</span></a><a class="item title" href="/2023/03/14/%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81%E9%9B%86%E7%9B%B8%E5%85%B3-xiaodangao/"><span class="title">交叉验证集相关xiaodangao</span></a><a class="item title" href="/2023/03/09/%5Bmachine-learning%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%5D%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92-xiaodangao/"><span class="title">[machinelearning学习笔记]逻辑回归xiaodangao</span></a><a class="item title" href="/2023/03/08/%5Bleetcode%5D2584.%20%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84%E4%BD%BF%E4%B9%98%E7%A7%AF%E4%BA%92%E8%B4%A8%20%EF%BC%88%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3%EF%BC%89-xiaodangao/"><span class="title">[leetcode]2584.分割数组使乘积互质（质因数分解）xiaodangao</span></a><a class="item title" href="/2023/03/07/%5Bleetcode%5D2552.%20%E7%BB%9F%E8%AE%A1%E4%B8%8A%E5%8D%87%E5%9B%9B%E5%85%83%E7%BB%84.%E9%A2%98%E8%A7%A3O(n%5E2)-xiaodangao/"><span class="title">[leetcode]2552.统计上升四元组.题解O(n^2)xiaodangao</span></a><a class="item title" href="/2023/03/02/leetcode%202564.%20%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BC%82%E6%88%96%E6%9F%A5%E8%AF%A2%5B%E9%A2%98%E8%A7%A3%5D-xiaodangao/"><span class="title">leetcode2564.子字符串异或查询[题解]xiaodangao</span></a><a class="item title" href="/2023/03/02/leetcode2565.%20%E6%9C%80%E5%B0%91%E5%BE%97%E5%88%86%E5%AD%90%E5%BA%8F%E5%88%97%5B%E9%A2%98%E8%A7%A3%5D-xiaodangao/"><span class="title">leetcode2565.最少得分子序列[题解]xiaodangao</span></a><a class="item title" href="/2022/04/22/P3224%20%5BHNOI2012%5D%E6%B0%B8%E6%97%A0%E4%B9%A1%EF%BC%88fhq-treap%E9%A2%98%E8%A7%A3%EF%BC%89-xiaodangao/"><span class="title">P3224[HNOI2012]永无乡（fhqtreap题解）xiaodangao</span></a><a class="item title" href="/2021/11/03/CF1593F%20Red-Black%20Number%EF%BC%88%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2%EF%BC%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%89-xiaodangao/"><span class="title">CF1593FRedBlackNumber（记忆化搜索，动态规划）xiaodangao</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/">计算机科学</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2020-11-21T04:55:00.000Z">2020-11-21</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-04-22T03:40:55.243Z">2024-04-22</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>vim一键配置(无插件版）xiaodangao</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><pre><code class="hljs plaintext">
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot; 显示相关  
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+
+
+&quot;winpos 5 5          &quot; 设定窗口位置  
+
+&quot;set lines=40 columns=155    &quot; 设定窗口大小  
+
+&quot;set nu              &quot; 显示行号  
+
+set go=             &quot; 不要图形按钮  
+
+&quot;color asmanian2     &quot; 设置背景主题  
+
+set guifont=Courier_New:h10:cANSI   &quot; 设置字体  
+
+&quot;syntax on           &quot; 语法高亮  
+
+autocmd InsertLeave * se nocul  &quot; 用浅色高亮当前行  
+
+autocmd InsertEnter * se cul    &quot; 用浅色高亮当前行  
+
+&quot;set ruler           &quot; 显示标尺  
+
+set showcmd         &quot; 输入的命令显示出来，看的清楚些  
+
+&quot;set cmdheight=1     &quot; 命令行（在状态行下）的高度，设置为1  
+
+&quot;set whichwrap+=&lt;,&gt;,h,l   &quot; 允许backspace和光标键跨越行边界(不建议)  
+
+&quot;set scrolloff=3     &quot; 光标移动到buffer的顶部和底部时保持3行距离  
+
+set novisualbell    &quot; 不要闪烁(不明白)  
+
+set statusline=%F%m%r%h%w\ [FORMAT=%&#123;&amp;ff&#125;]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %&#123;strftime(\&quot;%d/%m/%y\ -\ %H:%M\&quot;)&#125;   &quot;状态行显示的内容  
+
+set laststatus=1    &quot; 启动显示状态行(1),总是显示状态行(2)  
+
+set foldenable      &quot; 允许折叠  
+
+set foldmethod=manual   &quot; 手动折叠  
+
+&quot;set background=dark &quot;背景使用黑色 
+
+set nocompatible  &quot;去掉讨厌的有关vi一致性模式，避免以前版本的一些bug和局限  
+
+&quot; 显示中文帮助
+
+if version &gt;= 603
+
+    set helplang=cn
+
+    set encoding=utf-8
+
+endif
+
+&quot; 设置配色方案
+
+&quot;colorscheme murphy
+
+&quot;字体 
+
+&quot;if (has(&quot;gui_running&quot;)) 
+
+&quot;   set guifont=Bitstream\ Vera\ Sans\ Mono\ 10 
+
+&quot;endif 
+
+
+ 
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+
+set termencoding=utf-8
+
+set encoding=utf-8
+
+set fileencodings=ucs-bom,utf-8,cp936
+
+set fileencoding=utf-8
+
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot;&quot;&quot;&quot;&quot;新文件标题&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot;新建.c,.h,.sh,.java文件，自动插入文件头 
+
+autocmd BufNewFile *.cpp,*.[ch],*.sh,*.java exec &quot;:call SetTitle()&quot; 
+
+&quot;&quot;定义函数SetTitle，自动插入文件头 
+
+func SetTitle() 
+
+    &quot;如果文件类型为.sh文件 
+
+    if &amp;filetype == &#x27;sh&#x27; 
+
+        call setline(1,&quot;\#########################################################################&quot;) 
+
+        call append(line(&quot;.&quot;), &quot;\# File Name: &quot;.expand(&quot;%&quot;)) 
+
+        call append(line(&quot;.&quot;)+1, &quot;\# Author: Badwoman&quot;) 
+    
+        call append(line(&quot;.&quot;)+2, &quot;\# mail: 1194446133@qq.com&quot;) 
+
+        call append(line(&quot;.&quot;)+3, &quot;\# Created Time: &quot;.strftime(&quot;%c&quot;)) 
+
+        call append(line(&quot;.&quot;)+4, &quot;\#########################################################################&quot;) 
+
+        call append(line(&quot;.&quot;)+5, &quot;\#!/bin/bash&quot;) 
+
+        call append(line(&quot;.&quot;)+6, &quot;&quot;) 
+
+    else 
+
+        call setline(1, &quot;/*************************************************************************&quot;) 
+
+        call append(line(&quot;.&quot;), &quot;    &gt; File Name: &quot;.expand(&quot;%&quot;)) 
+
+        call append(line(&quot;.&quot;)+1, &quot;\# Author: Badwoman&quot;) 
+
+    call append(line(&quot;.&quot;)+2, &quot;\# mail: 1194446133@qq.com&quot;) 
+
+        call append(line(&quot;.&quot;)+3, &quot;    &gt; Created Time: &quot;.strftime(&quot;%c&quot;)) 
+
+        call append(line(&quot;.&quot;)+4, &quot; ************************************************************************/&quot;) 
+
+        call append(line(&quot;.&quot;)+5, &quot;&quot;)
+
+    endif
+
+    if &amp;filetype == &#x27;cpp&#x27;
+
+        call append(line(&quot;.&quot;)+6, &quot;#include&lt;set&gt;&quot;)
+    
+    call append(line(&quot;.&quot;)+7, &quot;#include&lt;iostream&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+8, &quot;#include&lt;cstring&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+9, &quot;#include&lt;cmath&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+10, &quot;#include&lt;cstdio&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+11, &quot;#include&lt;cstdlib&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+12, &quot;#include&lt;map&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+13, &quot;#include&lt;algorithm&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+14, &quot;#include&lt;vector&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+15, &quot;#include&lt;queue&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+16, &quot;#include&lt;stack&gt;&quot;)
+
+    call append(line(&quot;.&quot;)+17, &quot;#define ll long long&quot;)
+
+    call append(line(&quot;.&quot;)+18, &quot;#define ull unsigned long long&quot;)
+
+    call append(line(&quot;.&quot;)+19, &quot;#define pb push_back&quot;)
+
+    call append(line(&quot;.&quot;)+20, &quot;#define mp make_pair&quot;)
+
+        call append(line(&quot;.&quot;)+21, &quot;#define rep(i,a,b) for(int i=a;i&lt;=b;++i)&quot;)
+
+        call append(line(&quot;.&quot;)+22, &quot;#define bep(i,a,b) for(int i=a;i&gt;=b;--i)&quot;)
+
+        call append(line(&quot;.&quot;)+23, &quot;#define lowbit(x) (x&amp;(-x))&quot;)
+        call append(line(&quot;.&quot;)+24, &quot;#define ch() getchar()&quot;)
+        call append(line(&quot;.&quot;)+25, &quot;#define pc(x) putchar(x)&quot;)
+    call append(line(&quot;.&quot;)+26, &quot;using namespace std;&quot;)
+
+    call append(line(&quot;.&quot;)+27, &quot;&quot;)
+        call append(line(&quot;.&quot;)+28, &quot;template&lt;typename T&gt;void read(T&amp;x)&#123;&quot;)
+    call append(line(&quot;.&quot;)+29, &quot;static char c;static int f;&quot;)
+    call append(line(&quot;.&quot;)+30, &quot;for(c=ch(),f=1;c&lt;&#x27;0&#x27;||c&gt;&#x27;9&#x27;;c=ch())if(c==&#x27;-&#x27;)f=-f;&quot;)
+    call append(line(&quot;.&quot;)+31, &quot;for(x=0;c&gt;=&#x27;0&#x27;&amp;&amp;c&lt;=&#x27;9&#x27;;c=ch())x=x*10+(c&amp;15);x*=f;&quot;)
+        call append(line(&quot;.&quot;)+32, &quot;&#125;&quot;)
+        call append(line(&quot;.&quot;)+33, &quot;template&lt;typename T&gt;void write(T x)&#123;&quot;)
+    call append(line(&quot;.&quot;)+34, &quot;static char q[65];int cnt=0;&quot;)
+    call append(line(&quot;.&quot;)+35, &quot;if(x&lt;0)pc(&#x27;-&#x27;),x=-x;&quot;)
+    call append(line(&quot;.&quot;)+36, &quot;q[++cnt]=x%10,x/=10;&quot;)
+    call append(line(&quot;.&quot;)+37, &quot;while(x)&quot;)
+    call append(line(&quot;.&quot;)+38, &quot;	q[++cnt]=x%10,x/=10;&quot;)
+    call append(line(&quot;.&quot;)+39, &quot;while(cnt)pc(q[cnt--]+&#x27;0&#x27;);&quot;)
+        call append(line(&quot;.&quot;)+40, &quot;&#125;&quot;)
+    endif
+
+    if &amp;filetype == &#x27;c&#x27;
+
+        call append(line(&quot;.&quot;)+6, &quot;#include&lt;stdio.h&gt;&quot;)
+
+        call append(line(&quot;.&quot;)+7, &quot;&quot;)
+
+    endif
+
+    &quot;新建文件后，自动定位到文件末尾
+
+    autocmd BufNewFile * normal G
+
+endfunc 
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot;键盘命令
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+
+
+nmap &lt;leader&gt;w :w!&lt;cr&gt;
+
+nmap &lt;leader&gt;f :find&lt;cr&gt;
+
+
+
+&quot; 映射全选+复制 ctrl+a
+
+map &lt;C-A&gt; ggVGY
+
+map! &lt;C-A&gt; &lt;Esc&gt;ggVGY
+
+map &lt;F12&gt; gg=G
+
+&quot; 选中状态下 Ctrl+c 复制
+
+vmap &lt;C-c&gt; &quot;+y
+
+&quot;去空行  
+
+nnoremap &lt;F2&gt; :g/^\s*$/d&lt;CR&gt; 
+
+&quot;比较文件  
+
+nnoremap &lt;C-F2&gt; :vert diffsplit 
+
+&quot;新建标签  
+
+map &lt;M-F2&gt; :tabnew&lt;CR&gt;  
+
+&quot;列出当前目录文件  
+
+map &lt;F3&gt; :tabnew .&lt;CR&gt;  
+
+&quot;打开树状文件目录  
+
+map &lt;C-F3&gt; \be  
+
+&quot;C，C++ 按F5编译运行
+
+map &lt;F5&gt; :call CompileRunGcc()&lt;CR&gt;
+
+func! CompileRunGcc()
+
+    exec &quot;w&quot;
+
+    if &amp;filetype == &#x27;c&#x27;
+
+        exec &quot;!g++ % -o %&lt;&quot;
+
+        exec &quot;! ./%&lt;&quot;
+
+    elseif &amp;filetype == &#x27;cpp&#x27;
+
+        exec &quot;!g++ % -o %&lt;&quot;
+
+        exec &quot;! ./%&lt;&quot;
+
+    elseif &amp;filetype == &#x27;java&#x27; 
+
+        exec &quot;!javac %&quot; 
+
+        exec &quot;!java %&lt;&quot;
+
+    elseif &amp;filetype == &#x27;sh&#x27;
+
+        :!./%
+
+    endif
+
+endfunc
+
+&quot;C,C++的调试
+
+map &lt;F8&gt; :call Rungdb()&lt;CR&gt;
+
+func! Rungdb()
+
+    exec &quot;w&quot;
+
+    exec &quot;!g++ % -g -o %&lt;&quot;
+
+    exec &quot;!gdb ./%&lt;&quot;
+
+endfunc
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot;&quot;实用设置
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot; 设置当文件被改动时自动载入
+
+set autoread
+
+&quot; quickfix模式
+
+autocmd FileType c,cpp map &lt;buffer&gt; &lt;leader&gt;&lt;space&gt; :w&lt;cr&gt;:make&lt;cr&gt;
+
+&quot;代码补全 
+
+set completeopt=preview,menu 
+
+&quot;允许插件  
+
+filetype plugin on
+
+&quot;共享剪贴板  
+
+set clipboard+=unnamed 
+
+&quot;从不备份  
+
+set nobackup
+
+&quot;make 运行
+
+:set makeprg=g++\ -Wall\ \ %
+
+&quot;自动保存
+
+set autowrite
+
+set ruler                   &quot; 打开状态栏标尺
+
+set cursorline              &quot; 突出显示当前行
+
+set magic                   &quot; 设置魔术
+
+set guioptions-=T           &quot; 隐藏工具栏
+
+set guioptions-=m           &quot; 隐藏菜单栏
+
+&quot;set statusline=\ %&lt;%F[%1*%M%*%n%R%H]%=\ %y\ %0(%&#123;&amp;fileformat&#125;\ %&#123;&amp;encoding&#125;\ %c:%l/%L%)\
+
+&quot; 设置在状态行显示的信息
+
+set foldcolumn=0
+
+set foldmethod=indent 
+
+set foldlevel=3 
+
+set foldenable              &quot; 开始折叠
+
+&quot; 不要使用vi的键盘模式，而是vim自己的
+
+set nocompatible
+
+&quot; 语法高亮
+
+set syntax=on
+
+&quot; 去掉输入错误的提示声音
+
+set noeb
+
+&quot; 在处理未保存或只读文件的时候，弹出确认
+
+set confirm
+
+&quot; 自动缩进
+
+set autoindent
+
+set cindent
+
+&quot; Tab键的宽度
+
+set tabstop=4
+
+&quot; 统一缩进为4
+
+set softtabstop=4
+
+set shiftwidth=4
+
+&quot; 不要用空格代替制表符
+
+set noexpandtab
+
+&quot; 在行和段开始处使用制表符
+
+set smarttab
+
+&quot; 显示行号
+
+set number
+
+&quot; 历史记录数
+
+set history=1000
+
+&quot;禁止生成临时文件
+
+set nobackup
+
+set noswapfile
+
+&quot;搜索忽略大小写
+
+set ignorecase
+
+&quot;搜索逐字符高亮
+
+set hlsearch
+
+set incsearch
+
+&quot;行内替换
+
+set gdefault
+
+&quot;编码设置
+
+set enc=utf-8
+
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+
+&quot;语言设置
+
+set langmenu=zh_CN.UTF-8
+
+set helplang=cn
+
+&quot; 我的状态行显示的内容（包括文件类型和解码）
+
+&quot;set statusline=%F%m%r%h%w\ [FORMAT=%&#123;&amp;ff&#125;]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %&#123;strftime(\&quot;%d/%m/%y\ -\ %H:%M\&quot;)&#125;
+
+&quot;set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
+
+&quot; 总是显示状态行
+
+set laststatus=2
+
+&quot; 命令行（在状态行下）的高度，默认为1，这里是2
+
+set cmdheight=2
+
+&quot; 侦测文件类型
+
+filetype on
+
+&quot; 载入文件类型插件
+
+filetype plugin on
+
+&quot; 为特定文件类型载入相关缩进文件
+
+filetype indent on
+
+&quot; 保存全局变量
+
+set viminfo+=!
+
+&quot; 带有如下符号的单词不要被换行分割
+
+set iskeyword+=_,$,@,%,#,-
+
+&quot; 字符间插入的像素行数目
+
+set linespace=0
+
+&quot; 增强模式中的命令行自动完成操作
+
+set wildmenu
+
+&quot; 使回格键（backspace）正常处理indent, eol, start等
+
+set backspace=2
+
+&quot; 允许backspace和光标键跨越行边界
+
+set whichwrap+=&lt;,&gt;,h,l
+
+&quot; 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
+
+set mouse=a
+
+set selection=exclusive
+
+set selectmode=mouse,key
+
+&quot; 通过使用: commands命令，告诉我们文件的哪一行被改变过
+
+set report=0
+
+&quot; 在被分割的窗口间显示空白，便于阅读
+
+set fillchars=vert:\ ,stl:\ ,stlnc:\
+
+&quot; 高亮显示匹配的括号
+
+set showmatch
+
+&quot; 匹配括号高亮的时间（单位是十分之一秒）
+
+set matchtime=1
+
+&quot; 光标移动到buffer的顶部和底部时保持3行距离
+
+set scrolloff=3
+
+&quot; 为C程序提供自动缩进
+
+set smartindent
+
+&quot; 高亮显示普通txt文件（需要txt.vim脚本）
+
+au BufRead,BufNewFile *  setfiletype txt
+
+&quot;自动补全
+
+:inoremap ( ()&lt;ESC&gt;i
+
+:inoremap ) &lt;c-r&gt;=ClosePair(&#x27;)&#x27;)&lt;CR&gt;
+
+:inoremap &#123; &#123;&lt;CR&gt;&#125;&lt;ESC&gt;O
+
+:inoremap &#125; &lt;c-r&gt;=ClosePair(&#x27;&#125;&#x27;)&lt;CR&gt;
+
+:inoremap [ []&lt;ESC&gt;i
+
+:inoremap ] &lt;c-r&gt;=ClosePair(&#x27;]&#x27;)&lt;CR&gt;
+
+:inoremap &quot; &quot;&quot;&lt;ESC&gt;i
+
+:inoremap &#x27; &#x27;&#x27;&lt;ESC&gt;i
+
+function! ClosePair(char)
+
+    if getline(&#x27;.&#x27;)[col(&#x27;.&#x27;) - 1] == a:char
+
+        return &quot;\&lt;Right&gt;&quot;
+
+    else
+
+        return a:char
+
+    endif
+
+endfunction
+
+filetype plugin indent on 
+
+&quot;打开文件类型检测, 加了这句才可以用智能补全
+
+set completeopt=longest,menu
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot; CTags的设定  
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+let Tlist_Sort_Type = &quot;name&quot;    &quot; 按照名称排序  
+
+let Tlist_Use_Right_Window = 1  &quot; 在右侧显示窗口  
+
+let Tlist_Compart_Format = 1    &quot; 压缩方式  
+
+let Tlist_Exist_OnlyWindow = 1  &quot; 如果只有一个buffer，kill窗口也kill掉buffer  
+
+let Tlist_File_Fold_Auto_Close = 0  &quot; 不要关闭其他文件的tags  
+
+let Tlist_Enable_Fold_Column = 0    &quot; 不要显示折叠树  
+
+autocmd FileType java set tags+=D:\tools\java\tags  
+
+&quot;autocmd FileType h,cpp,cc,c set tags+=D:\tools\cpp\tags  
+
+&quot;let Tlist_Show_One_File=1            &quot;不同时显示多个文件的tag，只显示当前文件的
+
+&quot;设置tags  
+
+set tags=tags  
+
+&quot;set autochdir 
+
+
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot;其他东东
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;
+
+&quot;默认打开Taglist 
+
+let Tlist_Auto_Open=1 
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; 
+
+&quot; Tag list (ctags) 
+
+&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot; 
+
+let Tlist_Ctags_Cmd = &#x27;/usr/bin/ctags&#x27; 
+
+let Tlist_Show_One_File = 1 &quot;不同时显示多个文件的tag，只显示当前文件的 
+
+let Tlist_Exit_OnlyWindow = 1 &quot;如果taglist窗口是最后一个窗口，则退出vim 
+
+let Tlist_Use_Right_Window = 1 &quot;在右侧窗口中显示taglist窗口
+
+&quot; minibufexpl插件的一般设置
+
+let g:miniBufExplMapWindowNavVim = 1
+
+let g:miniBufExplMapWindowNavArrows = 1
+
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+</code></pre>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://example.com/2020/11/21/vim%E4%B8%80%E9%94%AE%E9%85%8D%E7%BD%AE(%E6%97%A0%E6%8F%92%E4%BB%B6%E7%89%88%EF%BC%89-xiaodangao/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://example.com/2020/11/21/vim%E4%B8%80%E9%94%AE%E9%85%8D%E7%BD%AE(%E6%97%A0%E6%8F%92%E4%BB%B6%E7%89%88%EF%BC%89-xiaodangao/&title=vim一键配置(无插件版）xiaodangao - Hexo&summary=```"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=vim一键配置(无插件版）xiaodangao - Hexo&amp;body=http://example.com/2020/11/21/vim%E4%B8%80%E9%94%AE%E9%85%8D%E7%BD%AE(%E6%97%A0%E6%8F%92%E4%BB%B6%E7%89%88%EF%BC%89-xiaodangao/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=http://example.com/2020/11/21/vim%E4%B8%80%E9%94%AE%E9%85%8D%E7%BD%AE(%E6%97%A0%E6%8F%92%E4%BB%B6%E7%89%88%EF%BC%89-xiaodangao/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2020/11/24/ProblemJ.prime%20game(%E8%B4%A8%E5%9B%A0%E6%95%B0%E5%88%86%E8%A7%A3)-xiaodangao/">ProblemJ.primegame(质因数分解)xiaodangao</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2020/11/20/Acwing.271%20%E6%9D%A8%E8%80%81%E5%B8%88%E7%9A%84%E7%85%A7%E7%9B%B8%E9%A6%86-xiaodangao/">Acwing.271杨老师的照相馆xiaodangao</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">xiaodangao</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br />
+本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+</aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+
+<!-- required -->
+<script src="/js/main.js?v=1.27.0" async></script>
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || null
+        }
+      });
+    })
+  }
+</script><script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+<script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+<script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
